@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-luxury-black text-white antialiased;
+  }
+
+  /* Anchor links clear fixed header */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    @apply bg-luxury-gold/30 text-white;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply border border-luxury-gold/20 bg-black/40 backdrop-blur-xl;
+  }
+
+  .glass-strong {
+    @apply border border-luxury-gold/25 bg-black/55 backdrop-blur-2xl;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-luxury-gold px-6 py-3 text-sm font-semibold uppercase tracking-wider text-luxury-black transition-all duration-300 hover:bg-luxury-gold-light hover:shadow-gold;
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-luxury-gold px-6 py-3 text-sm font-semibold uppercase tracking-wider text-luxury-gold transition-all duration-300 hover:bg-luxury-gold/10 hover:shadow-gold;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-luxury-gold;
+  }
+
+  .section-heading {
+    @apply font-serif text-3xl leading-tight text-white sm:text-4xl md:text-5xl;
+  }
+
+  .nav-link {
+    @apply relative text-xs font-medium uppercase tracking-widest text-white/80 transition-colors duration-300 hover:text-luxury-gold;
+  }
+
+  .nav-link-active::after {
+    @apply absolute -bottom-1 left-0 h-px w-full bg-luxury-gold content-[''];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Cinematic hero treatment for hotel photography */
+  .hero-photo {
+    filter: brightness(0.78) contrast(1.18) saturate(1.12);
+  }
+
+  .hero-grade {
+    background: linear-gradient(
+      135deg,
+      rgba(10, 10, 10, 0.35) 0%,
+      rgba(193, 154, 59, 0.06) 40%,
+      rgba(10, 10, 10, 0.5) 100%
+    );
+    mix-blend-mode: multiply;
+  }
+}
