@@ -63,7 +63,7 @@ export function Hero() {
 
       <motion.div
         style={{ opacity: contentOpacity }}
-        className="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 pb-36 pt-28 sm:px-6 lg:px-8"
+        className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-4 pb-32 pt-24 sm:px-6 sm:pb-36 sm:pt-28 lg:px-8"
       >
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -78,12 +78,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.8 }}
-          className="max-w-3xl font-serif text-4xl leading-[1.1] text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          className="max-w-3xl font-serif text-3xl leading-[1.1] text-white sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Experience
           <br />
           Luxury{" "}
-          <span className="font-script text-5xl text-luxury-gold sm:text-6xl md:text-7xl lg:text-8xl">
+          <span className="font-script text-4xl text-luxury-gold sm:text-6xl md:text-7xl lg:text-8xl">
             &
           </span>{" "}
           Comfort
@@ -155,7 +155,7 @@ export function Hero() {
         className="absolute bottom-0 left-0 right-0 z-10"
       >
         <div className="mx-auto max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
-          <div className="glass grid grid-cols-2 gap-4 rounded-lg p-4 sm:grid-cols-3 md:grid-cols-5 md:gap-6 md:p-6">
+          <div className="glass grid grid-cols-2 gap-3 rounded-lg p-3 sm:grid-cols-3 sm:gap-4 sm:p-4 md:grid-cols-5 md:gap-6 md:p-6">
             {HERO_FEATURES.map((feature) => {
               const Icon = featureIcons[feature.icon];
               return (

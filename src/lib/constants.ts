@@ -136,27 +136,27 @@ export const GALLERY_ITEMS = [
 
 export const PROXIMITY_DESTINATIONS = [
   {
+    name: "Mewar University",
+    distance: "2 km",
+    angle: 100,
+    radius: 26,
+  },
+  {
     name: "Bingham University, Karu",
-    distance: "4.2 km",
-    angle: -55,
-    radius: 38,
+    distance: "3.2 km",
+    angle: -50,
+    radius: 30,
   },
   {
     name: "Living Faith Church (Goshen City), Karu",
     distance: "6.8 km",
     angle: 35,
-    radius: 42,
-  },
-  {
-    name: "Karu Market",
-    distance: "3.1 km",
-    angle: 120,
-    radius: 35,
+    radius: 40,
   },
   {
     name: "Abuja City Centre",
     distance: "28 km",
-    angle: -140,
+    angle: -145,
     radius: 48,
   },
 ] as const;

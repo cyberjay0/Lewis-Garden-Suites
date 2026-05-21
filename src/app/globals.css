@@ -5,10 +5,15 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
     @apply bg-luxury-black text-white antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 0;
   }
 
   /* Anchor links clear fixed header */
@@ -31,11 +36,11 @@
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-luxury-gold px-6 py-3 text-sm font-semibold uppercase tracking-wider text-luxury-black transition-all duration-300 hover:bg-luxury-gold-light hover:shadow-gold;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-luxury-gold px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-luxury-black transition-all duration-300 hover:bg-luxury-gold-light hover:shadow-gold sm:px-6 sm:py-3 sm:text-sm;
   }
 
   .btn-outline-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-luxury-gold px-6 py-3 text-sm font-semibold uppercase tracking-wider text-luxury-gold transition-all duration-300 hover:bg-luxury-gold/10 hover:shadow-gold;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-luxury-gold px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-luxury-gold transition-all duration-300 hover:bg-luxury-gold/10 hover:shadow-gold sm:px-6 sm:py-3 sm:text-sm;
   }
 
   .section-label {

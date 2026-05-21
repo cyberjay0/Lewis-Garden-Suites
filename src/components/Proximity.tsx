@@ -8,6 +8,13 @@ import { SectionHeading } from "./ui/SectionHeading";
 import { Reveal } from "./ui/Reveal";
 import { fadeInUp } from "@/lib/motion";
 
+function mapLabel(name: string): string {
+  if (name.startsWith("Living Faith")) return "Living Faith Church";
+  if (name.startsWith("Bingham")) return "Bingham University";
+  if (name.startsWith("Abuja")) return "Abuja City Centre";
+  return name.split(",")[0];
+}
+
 function polarToCartesian(
   cx: number,
   cy: number,
@@ -52,13 +59,15 @@ export function Proximity() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-center justify-between border-b border-luxury-gold/10 py-3"
+                  className="flex flex-col gap-1 border-b border-luxury-gold/10 py-3 sm:flex-row sm:items-center sm:justify-between"
                 >
-                  <span className="flex items-center gap-2 text-sm text-white/80">
-                    <MapPin className="h-4 w-4 text-luxury-gold" strokeWidth={1.5} />
+                  <span className="flex items-start gap-2 pr-2 text-sm leading-snug text-white/80">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-luxury-gold" strokeWidth={1.5} />
                     {dest.name}
                   </span>
-                  <span className="font-serif text-luxury-gold">{dest.distance}</span>
+                  <span className="shrink-0 pl-6 font-serif text-luxury-gold sm:pl-0">
+                    {dest.distance}
+                  </span>
                 </motion.li>
               ))}
             </ul>
@@ -74,7 +83,7 @@ export function Proximity() {
         </div>
 
         <Reveal>
-          <div className="relative aspect-square w-full max-w-lg mx-auto">
+          <div className="relative mx-auto aspect-square w-full max-w-[min(100%,20rem)] sm:max-w-md lg:max-w-lg">
             <div className="glass-strong absolute inset-0 rounded-full" />
             <svg
               viewBox="0 0 100 100"
@@ -176,14 +185,14 @@ export function Proximity() {
                     initial={{ opacity: 0 }}
                     animate={linesDrawn ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ delay: 0.8 + i * 0.12 }}
-                    className="absolute max-w-[120px] -translate-x-1/2 -translate-y-1/2 text-center"
+                    className="absolute max-w-[5.5rem] -translate-x-1/2 -translate-y-1/2 text-center sm:max-w-[7.5rem]"
                     style={{
                       left: `${pos.x}%`,
                       top: `${pos.y}%`,
                     }}
                   >
-                    <p className="text-[9px] font-medium leading-tight text-white/90 sm:text-[10px]">
-                      {dest.name.split(",")[0]}
+                    <p className="text-[8px] font-medium leading-tight text-white/90 sm:text-[10px]">
+                      {mapLabel(dest.name)}
                     </p>
                     <p className="text-[8px] text-luxury-gold">{dest.distance}</p>
                   </motion.div>

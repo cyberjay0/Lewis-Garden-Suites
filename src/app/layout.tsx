@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Montserrat, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import { HOTEL } from "@/lib/constants";
@@ -21,6 +21,13 @@ const greatVibes = Great_Vibes({
   variable: "--font-great-vibes",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0A0A0A",
+};
 
 export const metadata: Metadata = {
   title: `${HOTEL.name} | Luxury Hotel in Karu, Nasarawa`,

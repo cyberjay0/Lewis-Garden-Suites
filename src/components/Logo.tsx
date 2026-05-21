@@ -18,7 +18,7 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
       alt="Lewis Garden"
       width={560}
       height={160}
-      className={`w-auto shrink-0 object-contain object-left ${heightClass[size]} ${className}`}
+      className={`w-auto max-w-[130px] shrink-0 object-contain object-left sm:max-w-[150px] ${heightClass[size]} ${className}`}
       priority={size === "sm"}
     />
   );
