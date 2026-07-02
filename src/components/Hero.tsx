@@ -48,13 +48,13 @@ export function Hero() {
 
         {/* Cinematic color grade & depth */}
         <div className="hero-grade absolute inset-0" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-r from-luxury-black/90 via-luxury-black/55 to-luxury-black/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-luxury-black via-luxury-black/35 to-luxury-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-luxury-black/70 via-luxury-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-luxury-black/80 via-luxury-black/20 to-transparent" />
         <div
-          className="absolute inset-0 opacity-80"
+          className="absolute inset-0 opacity-60"
           style={{
             background:
-              "radial-gradient(ellipse 80% 70% at 55% 45%, transparent 0%, rgba(10,10,10,0.35) 55%, rgba(10,10,10,0.92) 100%)",
+              "radial-gradient(ellipse 80% 70% at 55% 45%, transparent 0%, rgba(10,10,10,0.2) 55%, rgba(10,10,10,0.7) 100%)",
           }}
         />
         <div className="absolute inset-0 bg-luxury-gold/[0.04] mix-blend-soft-light" />
