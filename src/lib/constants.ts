@@ -55,7 +55,7 @@ export const ROOMS = [
     description:
       "Elegant comfort with premium bedding, ensuite bathroom, and city views.",
     price: 35000, // ← change price (Naira, number only)
-    image: "/images/rooms/standard.jpg", // ← add photo OR use a full URL
+    image: "/images/rooms/standard.jpg",
     imageFallback:
       "https://images.unsplash.com/photo-1631049301164-daecafdbc225?w=800&q=75",
     amenities: ["wifi", "tv", "ac"],
@@ -99,14 +99,14 @@ export const GALLERY_ITEMS = [
   {
     id: 1,
     category: "rooms",
-    src: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&q=70",
+    src: "/images/gallery-bedroom-1.jpg",
     alt: "Luxury bedroom",
   },
   {
     id: 2,
     category: "rooms",
-    src: "https://images.unsplash.com/photo-1591088397092-0509021401bf?w=500&q=70",
-    alt: "Suite interior",
+    src: "/images/rooms/deluxe.jpg",
+    alt: "Deluxe suite interior",
   },
   {
     id: 3,
@@ -129,8 +129,8 @@ export const GALLERY_ITEMS = [
   {
     id: 6,
     category: "rooms",
-    src: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&q=70",
-    alt: "Hotel lobby",
+    src: "/images/rooms/executive.jpg",
+    alt: "Executive suite",
   },
 ] as const;
 

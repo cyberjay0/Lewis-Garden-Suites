@@ -106,7 +106,7 @@ export function Contact() {
           className="relative aspect-[4/3] overflow-hidden rounded-lg lg:aspect-auto lg:min-h-[480px]"
         >
           <Image
-            src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=80"
+            src="/images/contact.jpg"
             alt="Lewis Garden and Suites hotel exterior at night"
             fill
             className="object-cover"

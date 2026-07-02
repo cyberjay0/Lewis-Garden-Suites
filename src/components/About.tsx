@@ -57,7 +57,7 @@ export function About() {
         <Reveal>
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
             <Image
-              src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=70"
+              src="/images/about.jpg"
               alt="Luxury hotel suite interior at Lewis Garden and Suites"
               fill
               loading="lazy"

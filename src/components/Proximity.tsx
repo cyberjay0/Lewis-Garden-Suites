@@ -23,8 +23,8 @@ function polarToCartesian(
 ): { x: number; y: number } {
   const angleRad = ((angleDeg - 90) * Math.PI) / 180;
   return {
-    x: cx + radius * Math.cos(angleRad),
-    y: cy + radius * Math.sin(angleRad),
+    x: Number((cx + radius * Math.cos(angleRad)).toFixed(4)),
+    y: Number((cy + radius * Math.sin(angleRad)).toFixed(4)),
   };
 }
 
